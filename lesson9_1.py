@@ -8,3 +8,16 @@ st.write("## Hello world Robert") #streamlit 重點在顯示網頁資料，無�
 st.write("Hello ***嗨***") 
 st.write(">>#### Hello Athena") 
 st.write(">>>> # <https://google.com>") 
+
+"Hello ***magic***"
+
+"http://google.com/ "
+
+st.markdown("Hello ***world***")
+st.title("這是app的title")
+st.header("這是header")
+st.subheader("這是subheader")
+st.divider() #格線
+st.caption("這是caption")
+st.code("a=123")
+
