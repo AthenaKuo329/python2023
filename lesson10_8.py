@@ -20,6 +20,12 @@ dataFrame.columns = ["站點名稱","車數","可借","行政區","時間","地�
 dataFrame1 = dataFrame.set_index("站點名稱")  
 # https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.set_index.html
 
+
+group_data = dataFrame.groupby('行政區').sum()
+areas = group_data.index.to_numpy().tolist()
+#areas
+
+
 min,max = st.slider(
     '請選擇可借的數量區間',
     0, 100, (0, 100))  #0最小，100最大
@@ -32,3 +38,6 @@ count = mask_dataFrame["車數"].count()
 st.write("符合條件的站點數:",count)
 st.dataframe(mask_dataFrame)  #寫此行指令會變成網頁資料
 
+option = st.selectbox('行政區域', areas)
+
+st.write('You selected:', option)
