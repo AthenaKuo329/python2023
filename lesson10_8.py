@@ -38,6 +38,7 @@ count = mask_dataFrame["車數"].count()
 st.write("符合條件的站點數:",count)
 st.dataframe(mask_dataFrame)  #寫此行指令會變成網頁資料
 
-option = st.selectbox('行政區域', areas)
 
+
+option = st.selectbox('行政區域', areas)
 st.write('You selected:', option)
